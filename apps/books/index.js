@@ -1,5 +1,4 @@
 var alexa = require("alexa-app");
-var readlineSync = require("readline-sync");
 var xml2js = require("xml2js").parseString;
 var request = require("request");
 var deasync = require("deasync");
@@ -8,14 +7,22 @@ var fs = require("fs");
 // Define an alexa-app
 var app = new alexa.app('books');
 
-const { goodreads: { key } } = JSON.parse(
-  fs.readFileSync("secrets.json", "utf8")
-);
+let API_KEY = null;
+if (process.env.NODE_ENV === 'prod') {
+  API_KEY = process.env.GOODREADS_API_KEY;
+}
+else {
+  const { goodreads: { key } } = JSON.parse(
+    fs.readFileSync("secrets.json", "utf8")
+  );
+  API_KEY = key;
+}
+
 
 function getBook(title) {
   var book = null;
   var url =
-    "https://www.goodreads.com/book/title.xml?key=" + key + "&title=" + title;
+    "https://www.goodreads.com/book/title.xml?key=" + API_KEY + "&title=" + title;
 
   request(url, function(error, response, body) {
     if (!error && response.statusCode == 200) {
