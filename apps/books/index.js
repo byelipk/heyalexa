@@ -1,5 +1,4 @@
 var alexa = require("alexa-app");
-var chatskills = require("chatskills");
 var readlineSync = require("readline-sync");
 var xml2js = require("xml2js").parseString;
 var request = require("request");
@@ -7,8 +6,7 @@ var deasync = require("deasync");
 var fs = require("fs");
 
 // Define an alexa-app
-//var app = new alexa.app('books');
-var app = chatskills.app("books");
+var app = new alexa.app('books');
 
 const { goodreads: { key } } = JSON.parse(
   fs.readFileSync("secrets.json", "utf8")
