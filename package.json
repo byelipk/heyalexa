@@ -1,0 +1,26 @@
+{
+  "name": "heyalexa",
+  "version": "2.2.4",
+  "description": "A web server module for Alexa (Amazon Echo) skills ..",
+  "main": "index.js",
+  "author": "Pat White",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-app-server": "^3.0.1",
+    "alexa-app": "^2.1.0",
+    "bluebird": "^2.9.34",
+    "body-parser": "~1.0.1",
+    "ejs": "~0.7.1",
+    "express": "~4.0.0",
+    "hotswap": "^1.1.0",
+    "xml2js": "*",
+    "request": "*",
+    "deasync": "*"
+  },
+  "scripts": {
+    "start": "node app"
+  },
+  "devDependencies": {
+    "supervisor": "^0.6.0"
+  }
+}
