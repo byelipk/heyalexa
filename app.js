@@ -12,14 +12,14 @@ AlexaAppServer.start({
   // This directory is relative to the script using alexa-app-server, not
   // relative to the module directory.
   // Default is 'public_html'.
-  public_html: './public',
+  public_html: 'public',
 
   // A directory containing Alexa Apps. This directory should contain one
   // or more subdirectories. Each subdirectory is a stand-alone Alexa App
   // built with the alexa-app framework. These directories are each
   // processed during server startup and hooked into the server.
   // Default is 'apps'.
-  app_dir: './apps',
+  app_dir: 'apps',
 
   // The prefix to use for all Alexa Apps. For example, you may want all
   // your Alexa endpoints to be accessed under the "/api/" path off the
@@ -29,7 +29,7 @@ AlexaAppServer.start({
 
   // The directory containing server-side processing modules.
   // Default is 'server'.
-  server_dir: './server',
+  server_dir: 'server',
 
   // Enable http support.
   // Default is true.
