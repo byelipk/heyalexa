@@ -7,7 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "alexa-app-server": "^3.0.1",
-    "alexa-app": "^2.1.0",
+    "alexa-app": "^4.1.0",
     "bluebird": "^2.9.34",
     "body-parser": "~1.0.1",
     "ejs": "~0.7.1",
